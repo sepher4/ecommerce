@@ -1,5 +1,8 @@
 <p id="notice"><%= notice %></p>
 
+<% if @product.image.url.nil? == false %>
+  <p><%= image_tag @product.image %></p>
+
 <p>
   <strong>Name:</strong>
   <%= @product.name %>
@@ -7,7 +10,7 @@
 
 <p>
   <strong>Price:</strong>
-  <%= @product.price %>
+  <%= number_to_currency @product.price %>
 </p>
 
 <p>
@@ -26,14 +29,12 @@
 </p>
 
 <p>
-  <strong>Rating:</strong>
-  <%= @product.rating %>
-</p>
-
-<p>
   <strong>Category:</strong>
   <%= @product.category_id %>
 </p>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
+
+
+<% end %>

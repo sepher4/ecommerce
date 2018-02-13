@@ -4,7 +4,7 @@ one:
   name: MyString
   price: 9.99
   quantity: 1
-  decription: MyText
+  description: MyText
   brand: MyString
   rating: 1
   category_id: 1
@@ -13,7 +13,7 @@ two:
   name: MyString
   price: 9.99
   quantity: 1
-  decription: MyText
+  description: MyText
   brand: MyString
   rating: 1
   category_id: 1

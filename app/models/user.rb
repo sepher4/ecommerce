@@ -12,4 +12,8 @@ class User < ApplicationRecord
   	role == "admin"
   end
 
+  def guest?
+  	role == 'guest'
+  end
+
 end

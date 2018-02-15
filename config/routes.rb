@@ -6,12 +6,6 @@ Rails.application.routes.draw do
 
   get 'checkout' => 'cart#checkout'
 
-  get 'cart/add_to_cart'
-
-  get 'cart/view_order'
-
-  get 'cart/checkout'
-
   devise_for :users
 
   root 'storefront#all_items'
@@ -19,6 +13,8 @@ Rails.application.routes.draw do
   get 'categorical' => 'storefront#items_by_category'
 
   get 'branding' => 'storefront#items_by_brand'
+
+  post 'order_complete' => 'cart#order_complete'
 
   resources :products
 
